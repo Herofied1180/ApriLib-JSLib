@@ -26,14 +26,16 @@ If you are using this library in your own project please give credit at the top 
   
  What's New:
  
- - LibVersion Function
+ - IsTapped Function
+ - Minor Bug Fixes
   
 =============
 
  Coming Soon...
 ================
  
- - Nothing :(
+ - Button Function
+ - Radius Button Function
  
 ================
 
@@ -47,28 +49,33 @@ This function has already been pre-defined, so please do NOT re-define this func
 
 
 //The Square function's pre-defined variable
-var Square = null;
+var Square;
 
 //The RadiusSquare function's pre-defined variable
-var RadiusSquare = null;
+var RadiusSquare;
 
 //The Circle function's pre-defined variable
-var Circle = null;
+var Circle;
 
 //The Line function's pre-defined variable
-var Line = null;
+var Line;
 
 //The Text function's pre-defined variable
-var Text = null;
+var Text;
 
 //The TextSize function's pre-defined variable
-var TextSize = null;
+var TextSize;
 
 //The TextWidthHeight function's pre-defined variable
-var TextWidthHeight = null;
+var TextWidthHeight;
 
 //The LibVersion function's pre-defined variable
-var LibVersion = null;
+var LibVersion;
+
+//The IsTapped funciton's pre-defined variable
+var IsTapped;
+//The IsTapped function's extra pre-defined variables
+var ObjTapped;
 
 //Global variables
 var aprVar = {
@@ -133,6 +140,14 @@ var aprVar = {
     LibVersionVar: {
         
         //Is the LibVersion function enabled?
+        enabled: true
+        
+    },
+    
+    //IsTapped function's variables
+    IsTappedVar: {
+        
+        //Is the Lib Version function enabled?
         enabled: true
         
     }
@@ -256,7 +271,7 @@ if (aprVar.LibVersionVar.enabled === true){
 //Create function "LibVersion"
 LibVersion = function(){
     
-    println("ApriLib.js 0.4");
+    println("ApriLib.js 0.5");
     noLoop();
     
 //LibVersion function's definition end
@@ -264,6 +279,26 @@ LibVersion = function(){
 
 //LibVersion function's if statement end
 }
+
+//Check if the IsTapped function is enabled
+if (aprVar.IsTappedVar.enabled === true){
+
+//Create function "IsTapped"
+IsTapped = function(objectX, objectY, objectWidth, objectHeight){
+    
+    //IsTapped function's code
+    mouseClicked = function(){
+    if (mouseX < objectX+objectWidth && mouseX > objectX && mouseY < objectY+objectHeight && mouseY > objectY){
+    aprVar.IsTappedVar.IsTapped = true;
+    
+    }
+    
+    
+};
+};
+//IsTapped function's if statement end
+}
+
 //ApriLib code function end
 };
 
