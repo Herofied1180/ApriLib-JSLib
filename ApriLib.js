@@ -26,7 +26,6 @@ If you are using this library in your own project please give credit at the top 
   
  What's New:
  
- - IsTapped Function
  - Minor Bug Fixes
   
 =============
@@ -34,8 +33,7 @@ If you are using this library in your own project please give credit at the top 
  Coming Soon...
 ================
  
- - Button Function
- - Radius Button Function
+ - Nothing :(
  
 ================
 
@@ -74,8 +72,6 @@ var LibVersion;
 
 //The IsTapped funciton's pre-defined variable
 var IsTapped;
-//The IsTapped function's extra pre-defined variables
-var ObjTapped;
 
 //Global variables
 var aprVar = {
@@ -271,7 +267,7 @@ if (aprVar.LibVersionVar.enabled === true){
 //Create function "LibVersion"
 LibVersion = function(){
     
-    println("ApriLib.js 0.5");
+    println("ApriLib.js 0.6");
     noLoop();
     
 //LibVersion function's definition end
