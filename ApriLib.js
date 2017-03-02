@@ -26,17 +26,14 @@ If you are using this library in your own project please give credit at the top 
   
  What's New:
  
- - Text Function
- - TextSize Function
- - TextWidthHeight Function
+ - LibVersion Function
   
 =============
 
  Coming Soon...
 ================
  
- - Button Function
- - RadiusButton Function
+ - Nothing :(
  
 ================
 
@@ -47,7 +44,7 @@ If you are using this library in your own project please give credit at the top 
 NOTE:
 This function has already been pre-defined, so please do NOT re-define this function's code, or your program might become messed up and the code won't work.
 */
-var ApriLib = function(){
+
 
 //The Square function's pre-defined variable
 var Square = null;
@@ -69,6 +66,9 @@ var TextSize = null;
 
 //The TextWidthHeight function's pre-defined variable
 var TextWidthHeight = null;
+
+//The LibVersion function's pre-defined variable
+var LibVersion = null;
 
 //Global variables
 var aprVar = {
@@ -127,13 +127,20 @@ var aprVar = {
         //Is the TextWidthHeight function enabled?
         enabled: true
         
+    },
+    
+    //LibVersion function's variables
+    LibVersionVar: {
+        
+        //Is the LibVersion function enabled?
+        enabled: true
+        
     }
     
+//The aprVar variable's end
 };
-//Pre-Defined function variables
 
-//Pre-Defined function argument variables
-
+var ApriLib = function(){
 
 //Functions
 
@@ -237,10 +244,26 @@ TextWidthHeight = function(message, x, y, width, height){
     //TextWidthHeight function's code
     text(message, x, y, width, height);
     
+//TextWidthHeight function definition end
 };
 
+//TextWidthHeight function if statement end
 }
 
+//Check if the LibVersion function is enabled
+if (aprVar.LibVersionVar.enabled === true){
+
+//Create function "LibVersion"
+LibVersion = function(){
+    
+    println("ApriLib.js 0.4");
+    noLoop();
+    
+//LibVersion function's definition end
+};
+
+//LibVersion function's if statement end
+}
 //ApriLib code function end
 };
 
