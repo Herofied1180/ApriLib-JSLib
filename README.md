@@ -1,2 +1,2 @@
 # ApriLib-JSLib
-The unofficial main repository for ApriLib.js - A JavaScript Library
+Sorry, but this repository is undergoing maintainance.
