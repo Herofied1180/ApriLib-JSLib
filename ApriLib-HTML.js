@@ -77,10 +77,10 @@ var lib = {
    * @Revisions: None
   */
   if(typeof ID !== "number") { console.log("INVALID ID"); return; }
-  Kit.canvas = canvas;
-  Kit.pI = new Processing(Kit.canvas);
-  Kit.programID = ID;
-  Kit.localStorage = localStorage;
+  lib.canvas = canvas;
+  lib.pI = new Processing(lib.canvas);
+  lib.programID = ID;
+  lib.localStorage = localStorage;
   }
 };
 
@@ -335,6 +335,9 @@ IsTapped = function(objectX, objectY, objectWidth, objectHeight){
 
 //ApriLib code function end
 };
+
+//Activates lib.init
+lib.init(Processing, document.getElementById("canvas"), 4820088964841472);
 
 //Activates ApriLib.js
 ApriLib();
