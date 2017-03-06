@@ -202,6 +202,7 @@ if (aprVar.SquareVar.enabled === true){
 Square = function(x, y, width, height){
     
     //Square function's code
+    return(x, y, width, height);
     rect(x, y, width, height);
     
 //Square function's function definition end
@@ -217,6 +218,7 @@ if (aprVar.RadiusSquareVar.enabled === true){
 RadiusSquare = function(x, y, width, height, radius){
     
     //RadiusSquare function's code
+    return(x, y, width, height, radius);
     rect(x, y, width, height, radius);
     
 //RadiusSquare function's definiton end
@@ -231,6 +233,7 @@ if (aprVar.CircleVar.enabled === true){
 Circle = function(x, y, width, height){
     
     //Circle function's code
+    return(x, y, width, height);
     ellipse(x, y, width, height);
     
 //Circle function's definition end
@@ -246,6 +249,7 @@ if(aprVar.LineVar.enabled === true){
 Line = function(x1, y1, x2, y2){
     
     //Line function's code
+    return(x1, y1, x2, y2);
     line(x1, y1, x2, y2);
     
 //Line funciton's definition end
@@ -261,6 +265,7 @@ if (aprVar.TextVar.enabled === true){
 Text = function(message, x, y){
     
     //Text function's code
+    return(message, x, y);
     text(message, x, y);
     
 //Text function's definiton end
@@ -276,6 +281,7 @@ if (aprVar.TextSizeVar.enabled === true){
 TextSize = function(size){
     
     //TextSize function code
+    return(size);
     textSize(size);
     
 //TextSize funciton definiton end
@@ -291,6 +297,7 @@ if (aprVar.TextWidthHeightVar.enabled === true){
 TextWidthHeight = function(message, x, y, width, height){
     
     //TextWidthHeight function's code
+    return(message, x, y, width, height);
     text(message, x, y, width, height);
     
 //TextWidthHeight function definition end
@@ -322,6 +329,7 @@ IsTapped = function(objectX, objectY, objectWidth, objectHeight){
     
     //IsTapped function's code
     mouseClicked = function(){
+    return(objectX, objectY, objectWidth, objectHeight);
     if (mouseX < objectX+objectWidth && mouseX > objectX && mouseY < objectY+objectHeight && mouseY > objectY){
     aprVar.IsTappedVar.IsTapped = true;
     
