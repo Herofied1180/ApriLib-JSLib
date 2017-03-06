@@ -81,8 +81,8 @@ var lib = {
   lib.pI = new Processing(lib.canvas);
   lib.programID = ID;
   lib.localStorage = localStorage;
-  }
-};
+  
+
 
 //The Square function's pre-defined variable
 var Square;
@@ -196,7 +196,7 @@ var ApriLib = function(){
 //Square function
 
 //Check if the Square function is enabled
-if (aprVar.SquareVar.enabled === true){
+if (lib.aprVar.SquareVar.enabled === true){
 
 //Create function "Square"
 Square = function(x, y, width, height){
@@ -212,7 +212,7 @@ Square = function(x, y, width, height){
 }
 
 //Check if the RadiusSqaure function is enabled
-if (aprVar.RadiusSquareVar.enabled === true){
+if (lib.aprVar.RadiusSquareVar.enabled === true){
     
 //Create function "RadiusSquare"
 RadiusSquare = function(x, y, width, height, radius){
@@ -228,7 +228,7 @@ RadiusSquare = function(x, y, width, height, radius){
 }
 
 //Check if the Circle function is enabled
-if (aprVar.CircleVar.enabled === true){
+if (lib.aprVar.CircleVar.enabled === true){
 //Create funciton "Circle"
 Circle = function(x, y, width, height){
     
@@ -243,7 +243,7 @@ Circle = function(x, y, width, height){
 }
 
 //Check if the Line funciton is enabled
-if(aprVar.LineVar.enabled === true){
+if(lib.aprVar.LineVar.enabled === true){
 
 //Create funciton "Line"
 Line = function(x1, y1, x2, y2){
@@ -259,7 +259,7 @@ Line = function(x1, y1, x2, y2){
 }
 
 //Check if the Text function is enabled
-if (aprVar.TextVar.enabled === true){
+if (lib.aprVar.TextVar.enabled === true){
 
 //Create function "Text"
 Text = function(message, x, y){
@@ -275,7 +275,7 @@ Text = function(message, x, y){
 }
 
 //Check if the TextSize function is enabled
-if (aprVar.TextSizeVar.enabled === true){
+if (lib.aprVar.TextSizeVar.enabled === true){
 
 //Create function "TextSize"
 TextSize = function(size){
@@ -291,7 +291,7 @@ TextSize = function(size){
 }
 
 //Check if the TextWidthHeight function is enabled
-if (aprVar.TextWidthHeightVar.enabled === true){
+if (lib.aprVar.TextWidthHeightVar.enabled === true){
 
 //Create function "TextWidthHeight"
 TextWidthHeight = function(message, x, y, width, height){
@@ -307,7 +307,7 @@ TextWidthHeight = function(message, x, y, width, height){
 }
 
 //Check if the LibVersion function is enabled
-if (aprVar.LibVersionVar.enabled === true){
+if (lib.aprVar.LibVersionVar.enabled === true){
 
 //Create function "LibVersion"
 LibVersion = function(){
@@ -322,7 +322,7 @@ LibVersion = function(){
 }
 
 //Check if the IsTapped function is enabled
-if (aprVar.IsTappedVar.enabled === true){
+if (lib.aprVar.IsTappedVar.enabled === true){
 
 //Create function "IsTapped"
 IsTapped = function(objectX, objectY, objectWidth, objectHeight){
@@ -344,8 +344,10 @@ IsTapped = function(objectX, objectY, objectWidth, objectHeight){
 //ApriLib code function end
 };
 
+//Activates ApriLib.js
+lib.ApriLib();
+  }
+};
+
 //Activates lib.init
 lib.init(Processing, document.getElementById("canvas"), 4820088964841472);
-
-//Activates ApriLib.js
-ApriLib();
