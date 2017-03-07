@@ -27,7 +27,7 @@ If you are using this library in your own project please give credit at the top 
   
  GitHub:
   
-  - https://github.com/Herofied1180/ApriLib-JSLib.git
+  - https://github.com/Herofied1180/ApriLib-JSLib/master/ApriLib-HTML.js
   
  
 =============
@@ -81,38 +81,38 @@ var lib = {
   lib.pI = new Processing(lib.canvas);
   lib.programID = ID;
   lib.localStorage = localStorage;
-  
+  },
 
 
 //The Square function's pre-defined variable
-var Square;
+Square: null,
 
 //The RadiusSquare function's pre-defined variable
-var RadiusSquare;
+RadiusSquare: null,
 
 //The Circle function's pre-defined variable
-var Circle;
+Circle: null,
 
 //The Line function's pre-defined variable
-var Line;
+Line: null,
 
 //The Text function's pre-defined variable
-var Text;
+Text: null,
 
 //The TextSize function's pre-defined variable
-var TextSize;
+TextSize: null,
 
 //The TextWidthHeight function's pre-defined variable
-var TextWidthHeight;
+TextWidthHeight: null,
 
 //The LibVersion function's pre-defined variable
-var LibVersion;
+LibVersion: null,
 
 //The IsTapped funciton's pre-defined variable
-var IsTapped;
+IsTapped: null,
 
 //Global variables
-var aprVar = {
+aprVar: {
     
     //Is the program enabled?
     enabled: true,
@@ -187,145 +187,95 @@ var aprVar = {
     }
     
 //The aprVar variable's end
-};
+},
 
-var ApriLib = function(){
+ApriLib: function(){
 
 //Functions
 
 //Square function
 
-//Check if the Square function is enabled
-if (aprVar.SquareVar.enabled === true){
-
 //Create function "Square"
-Square = function(x, y, width, height){
+Square: function(x, y, width, height){
     
     //Square function's code
     return(x, y, width, height);
     rect(x, y, width, height);
     
 //Square function's function definition end
-};
-
-//Square function's if statement end
-}
-
-//Check if the RadiusSqaure function is enabled
-if (aprVar.RadiusSquareVar.enabled === true){
+},
     
 //Create function "RadiusSquare"
-RadiusSquare = function(x, y, width, height, radius){
+RadiusSquare: function(x, y, width, height, radius){
     
     //RadiusSquare function's code
     return(x, y, width, height, radius);
     rect(x, y, width, height, radius);
     
 //RadiusSquare function's definiton end
-};
-    
-//RadiusSquare function's if statement end
-}
+},
 
-//Check if the Circle function is enabled
-if (aprVar.CircleVar.enabled === true){
 //Create funciton "Circle"
-Circle = function(x, y, width, height){
+Circle: function(x, y, width, height){
     
     //Circle function's code
     return(x, y, width, height);
     ellipse(x, y, width, height);
     
 //Circle function's definition end
-};
-
-//Circle function's if statement end
-}
-
-//Check if the Line funciton is enabled
-if(aprVar.LineVar.enabled === true){
+},
 
 //Create funciton "Line"
-Line = function(x1, y1, x2, y2){
+Line: function(x1, y1, x2, y2){
     
     //Line function's code
     return(x1, y1, x2, y2);
     line(x1, y1, x2, y2);
     
 //Line funciton's definition end
-};
-
-//Line function's if statement end
-}
-
-//Check if the Text function is enabled
-if (aprVar.TextVar.enabled === true){
+},
 
 //Create function "Text"
-Text = function(message, x, y){
+Text: function(message, x, y){
     
     //Text function's code
     return(message, x, y);
     text(message, x, y);
     
 //Text function's definiton end
-};
-
-//Text function's if statement end
-}
-
-//Check if the TextSize function is enabled
-if (aprVar.TextSizeVar.enabled === true){
+},
 
 //Create function "TextSize"
-TextSize = function(size){
+TextSize: function(size){
     
     //TextSize function code
     return(size);
     textSize(size);
     
 //TextSize funciton definiton end
-};
-
-//TextSize function if statement end
-}
-
-//Check if the TextWidthHeight function is enabled
-if (aprVar.TextWidthHeightVar.enabled === true){
+},
 
 //Create function "TextWidthHeight"
-TextWidthHeight = function(message, x, y, width, height){
+TextWidthHeight: function(message, x, y, width, height){
     
     //TextWidthHeight function's code
     return(message, x, y, width, height);
     text(message, x, y, width, height);
     
 //TextWidthHeight function definition end
-};
-
-//TextWidthHeight function if statement end
-}
-
-//Check if the LibVersion function is enabled
-if (aprVar.LibVersionVar.enabled === true){
+},
 
 //Create function "LibVersion"
-LibVersion = function(){
+LibVersion: function(){
     
     println("ApriLib.js 0.6");
     noLoop();
     
 //LibVersion function's definition end
-};
-
-//LibVersion function's if statement end
-}
-
-//Check if the IsTapped function is enabled
-if (lib.aprVar.IsTappedVar.enabled === true){
+},
 
 //Create function "IsTapped"
-IsTapped = function(objectX, objectY, objectWidth, objectHeight){
+IsTapped: function(objectX, objectY, objectWidth, objectHeight){
     
     //IsTapped function's code
     mouseClicked = function(){
@@ -336,9 +286,7 @@ IsTapped = function(objectX, objectY, objectWidth, objectHeight){
     }
     
     
-};
-};
-//IsTapped function's if statement end
+},
 }
 
 //ApriLib code function end
@@ -346,7 +294,7 @@ IsTapped = function(objectX, objectY, objectWidth, objectHeight){
 
 //Activates ApriLib.js
 lib.ApriLib();
-  }
+  
 };
 
 //Activates lib.init
